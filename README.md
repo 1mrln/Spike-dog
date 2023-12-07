@@ -27,11 +27,15 @@ Our design was based on a [YouTube video](https://www.youtube.com/watch?v=efhQDq
 In the following we will guide you through the building process: 
 
 ### Building the robot step-by-step
-
+Bild mit Teilen,
+CAD-Bilder
+Explosionsding
+Satz: Hier noch video
+Video
    
 CAD Bildern, Video
 ## Programmierung
 schrittweise Blöcke einführen & erklären
-## Ressourcen & Probleme
-YT Video, 
-## Future works
+## Lessons learned and future works
+Sensoren (Abstand & farbe), KI- Kamera für Zukunft, Mikrofon für Sprachbefehle, Bewegung hunde-ähmlicher: beine statt Räder, bei Fuß-Funktion nicht nur geradlinig
+

@@ -10,7 +10,7 @@ At the beginning we wanted to develop a robotic dog that improves your security 
 We built the first prototype, which consisted of two wheels, two motors, a large plate. It was able to move around and bark at the colour red. You can see the prototype in the following picture. 
 
 We chose this idea, because we wanted to provide safety without putting a living being in danger. But while building we decided that we wanted to focus more on the social aspect of human-machine- interaction. That's why we switched our project goal: Our robotic dog should be able to interact with you and react to different scenarios. 
-Bild Prototype
+![prototype](prototype.jpg)
 
 In the following we will guide you through the process of building and programming our robotic dog. We will also exlain why we choose the design and functions. 
 

@@ -5,7 +5,7 @@ Robotic dog with social functions made with Lego Spike.
 We build a robotic dog with a focus on social interaction. It can move freely around the room and avoids obstacles. It also shows different reactions to different colors. When it sees yellow, it "greets" you by wagging its head and tail and barking happily. On magenta, it stops, barks and sounds the alarm. At the touch of a button, it starts the "heel" function, in which it moves at a defined distance from a person/object. 
 In the following you can see a video with the functions and the code will be explained later. 
 *Video*
-## Ursprüngliche Idee & Weiterentwicklung
+## Our idea and its development
 At the beginning we wanted to develop a robotic dog that improves your security at home by patrolling your house and alarming you. To scare off strangers, he should also be able to stand up and bark. 
 We built the first prototype, which consisted of two wheels, two motors, a large plate. It was able to move around and bark at the colour red. You can see the prototype in the following picture. 
 ![prototype](prototype.jpg)
@@ -18,7 +18,7 @@ In the following we will guide you through the process of building and programmi
 1. Get the [LEGO® Education SPIKE™ Prime-Set](https://education.lego.com/de-de/products/lego-education-spike-prime-set/45678/) to build your roboter. 
 2. Download the [LEGO® Education SPIKE™ App](https://education.lego.com/de-de/downloads/spike-app/software/) to your computer. Choose the right version for your operating system.   
 
-## Bauanleitung
+## Building our Spike Dog
 Our design was based on a [YouTube video](https://www.youtube.com/watch?v=efhQDqzQOD4) that we found. After comparing different examples we choose this design, because it fitted our requirements the most: 
 1. The design is quite realistic: It has dog-like features like ears or greeting you with a wagging tail. Because of the familiarity with the most typical features with a real dog the interaction threshold is lower compared to other designs. 
 2. The positioning of the distance sensor and its look tries to imitate the eyes of a puppy. This works as a easy non-verbal communication tool.
@@ -34,8 +34,74 @@ Satz: Hier noch video
 Video
    
 CAD Bildern, Video
-## Programmierung
-schrittweise Blöcke einführen & erklären
+## Programming our Spike Dog
+To program our Spike dog we used the *Lego Spike App* and its programming user interface. After opening the App you will see a variety of tutorials and example projects. We recommend the *"First steps"-Tutorial* because it will introduce you to the most important components and commands in a short time and its fun. 
+
+To start your own project, click on the button *"New project"*. If you want to use a already existing project you can find it by clicking on *"my projects"* in the menu on the left. Give your project a name and choose your programming language. In the *Spike App* you can choose between symbol bricks, text bricks ot python. Please choose *text bricks* to follow this tutorial. 
+
+Now you are in coding mode. 
+
+Follow the instructions to connect your PC to the Hub. If you connect sensors to the Hub, you will also see their output on the top menu. On the left you can see a menu with different types of bricks. Chose them by clicking and move them around by drag-n-drop. 
+
+### What are text bricks? 
+Text bricks are pieces of code that you can edit and merge to write your program. The shape of the bricks indicates where it should be positioned. There are different types of bricks: *motors, movement, light, sound, events, control, sensors, operators, variables* and your *own bricks*. Instead of explaining every brick we recommend you to try them out and compare the different outcomes. 
+
+Here you can see all of our code. In the following we will show our code in detail and explain what each code block does. We will start with simple movement, before we define the features and then we will put it all together at the end. If you want to test individual code blocks in the meantime we suggest to open another project file and test it there. 
+*bild komplett*
+
+### The Movement block
+First, we want the Spike dog to start moving. To structure our code, we used the *define brick* from *your own bricks* and gave it a simple name like *"Vorwärts"*. The purple block makes the diplay show a heart. This is not neccessary for the movement of the robot, but it is useful to know which part of the code is running on your robot right now. The following three bricks are responsible for the movement: We start the motors for our wheels and set the speed on 30%.
+Now our Spike Dog will move forward in a straight light, when you start the program. 
+
+**Please be careful**: Depending on the position of the motors you might need to change the direction of the wheels turning. You can do this by clicking on the arrows in the blue bricks.  
+*bild movement*
+
+### The Greeting block
+Our Spike Dog should be able to recognize us and greet us by wagging it's tail and head. We will use the *colour sensor* for this. To start we will define a brick again and call it *"Begrüßung"*. First we use the *"stoppe andere Stapel"*-brick to prevent instructions from other blocks from interfering with this process. Then the blue brick stops the movement. After a short pause for one second (yellow brick) we use a *control brick* to repeat the action two times. The action that should be repeated has to placed inside the control brick. Here, we want the Spike dogs eyes to blink and the display to show a smile. The purple brick starts the barking sound. Then we us a *motor brick* to activate the wagging of the tail and head. Try out different degrees and choose what looks best for you! 
+
+**Please be careful: Watch out which motor you choose here!**
+
+As we said, this action will be repeated twice. After a short pause, we use a *motor brick* again, to make the position of the head straight again. This is important, because the head and eyes are actually our *distance sensor*. If it is not aligned straight forward, it can't work properly and will be prone to malfunctions at other functions. 
+
+*bild greeting block*
+### The Stranger block
+We also want to define what happens when our Spike dog recognizes a stranger. Again we use a *define brick* and stop the other blocks (yellow brick). Just as before, we start by stopping the movement and wait (blue and yellow bricks). Again, we use a *repeat brick*, but now we use a *sound brick* to start the barking sound and a *light brick* to write "STOP!" at the display. 
+
+**Watch out: If you can click on the sound brick you can choose differnt sounds.**
+After barking twice and a 1s pause, the Spike Dog will start moving again. 
+
+*bild stranger*
+
+### The Dodge block
+Right now, our Spike Dog is able to move forward. You might already know that it will not stop and run into things. With the nect function we are going to change this. Again we use a *define* block and stop the actions of other blocks (yellow brick). We use the purple brick and write an "A" to indicate that we are in block *"Ausweichen"*. Now you could us a *control brick* and say "If we detect something close to use, the do this..". This works perfectly fine and you are welcome to try it out!
+
+But we want more functionality. That's why we use an *falls-dann control brick*. Under *sensors* you will find the brick that we will us as our condition: "if our colour sensor F will detects a specific colour". Then we define, what should happen if that condition appears: We will go to the function blocks we defined earlier. 
+In our case, we use yellow to indicate something familiar and start the *Greeting block*. When the sensor detects something magenta it will start the *Stranger block* instead. In both cases we will jump to the *Movement block* afterwards. 
+
+Now we continue with the case that the colour sensor doesn't recognize magenta or yellow. Then it will stop all movement and wait for 1s.
+
+**Be careful: Choose both motors to stop the movement completely!**
+
+Then we use a *movement brick* to make the wheels turn two times. Use the arrow to choose a backwards diretion. To finish the dodge maneuver we use another *movement brick* and starte a rotation in any direction. We choose 100 degrees to the left, but you are welcome to change this to your preferences. 
+
+Then after another short break we will start the Movement block again. This makes the Spike Dog stop, move backwards and turn after detecting something. Now the Spike Dog is able to take a walk with you and hold a defined distance to you. 
+
+*bild dodge block* 
+
+### The Heel block
+Right now, our Spike Dog is theoretically able to walk forward, dodge things and react to colours. But what if you want to take it for a walk? 
+Again we start with a *define brick* and stop other blocks. The F ("bei Fuß") will indicate that we are in this block. We use two *movement bricks* to start the forward movement and set the speed to 40%. We will later learn how the *Heel function* is activated. For now, just know that it will work, until you press the button (See yellow block *repeat until*). 
+Now we use three *if..then* bricks for three conditions. If the Spike dog is farther away than 15cm it starts moving. If the distance is exactly 15cm it will stop moving. And if the distance is shorter than 15cm it will move backwards. This ill be repeated until, you push the button. Then the *Movement block* will start again. 
+
+
+### The Main block
+Before, we defined some functions but we weren't able to start them. We will bring everthing together now and code our Main block. We use a *Wenn Programm startet* brick first. Then we use a *movement brick* to define which motors are responsible for movement in this block. We us a *control brick* to repeat the next bricks continously. 
+If everything is normal, the Spike Dog will follow the instructions of the *Movement block*. Now we add conditions: If the *distance sensor* detects something closer than 30cm, we will go to the *Dodge block*. In case the button is pushed, we will go to the *Heel block*. We already introduced those blocks and their funtionalities earlier, so you should be familiar with them already. 
+
+With this our code is finished and your Spike Dog is ready to explore the world. 
+
+*bild main block*
+
 ## Lessons learned and future works
 We learned a lot about the sensors (distance, color and force sensors). We encountered problems that we learned to deal with. For example, the short distance for the color perception of the color sensor and that the obstacles for the distance sensor cannot be made of any material, as it uses ultrasonic technology (therefore don't use sound-absorbing materials). 
 

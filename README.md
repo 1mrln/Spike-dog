@@ -37,5 +37,10 @@ CAD Bildern, Video
 ## Programmierung
 schrittweise Blöcke einführen & erklären
 ## Lessons learned and future works
-Sensoren (Abstand & farbe), KI- Kamera für Zukunft, Mikrofon für Sprachbefehle, Bewegung hunde-ähmlicher: beine statt Räder, bei Fuß-Funktion nicht nur geradlinig
+We learned a lot about the sensors (distance, color and force sensors). We encountered problems that we learned to deal with. For example, the short distance for the color perception of the color sensor and that the obstacles for the distance sensor cannot be made of any material, as it uses ultrasonic technology (therefore don't use sound-absorbing materials). 
 
+For optimized social human-machine interaction, it's advisable to use an AI camera for better recognition of the environment (especially people) and a microphone for voice commands. However, these aren't included in the [LEGO® Education SPIKE™ Prime-Set](https://education.lego.com/de-de/products/lego-education-spike-prime-set/45678/). With an AI camera, the heel function could possibly not only work in a straight line, as in our case.
+
+Furthermore, the movement could be made more dog-like by replacing the wheels and using joints to represent the legs. 
+
+But we're happy to built a robotic dog with the main focus on social interaction with a few working features. Have fun if you want to build the puppy-like robot :smile:

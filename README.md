@@ -27,7 +27,13 @@ Our design was based on a [YouTube video](https://www.youtube.com/watch?v=efhQDq
 In the following we will guide you through the building process: 
 
 ### Building the robot step-by-step
-Bild mit Teilen,
+In the following picture you can see all the material that you need to build the Spike Dog. 
+![material](material_SpikeDog.jpg)
+
+![3d1](Spikeface.png)
+![3d2](Spikefront.png)
+
+
 CAD-Bilder
 Explosionsding
 Satz: Hier noch video

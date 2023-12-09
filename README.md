@@ -4,7 +4,8 @@ Robotic dog with social functions made with Lego Spike.
 ## What is this? 
 We build a robotic dog with a focus on social interaction. It can move freely around the room and avoids obstacles. It also shows different reactions to different colors. When it sees yellow, it "greets" you by wagging its head and tail and barking happily. On magenta, it stops, barks and sounds the alarm. At the touch of a button, it starts the "heel" function, in which it moves at a defined distance from a person/object. 
 In the following you can see a video with the functions and the code will be explained later. 
-*Video*
+![video functions](sd-functionalities2.mp4) 
+
 ## Our idea and its development
 At the beginning we wanted to develop a robotic dog that improves your security at home by patrolling your house and alarming you. To scare off strangers, he should also be able to stand up and bark. 
 We built the first prototype, which consisted of two wheels, two motors, a large plate. It was able to move around and bark at the colour red. You can see the prototype in the following picture. 

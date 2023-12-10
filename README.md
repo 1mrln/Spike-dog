@@ -27,20 +27,21 @@ Our design was based on a [YouTube video](https://www.youtube.com/watch?v=efhQDq
 
 In the following we will guide you through the building process: 
 
-### Building the robot step-by-step
+### Building the robot
 In the following picture you can see all the material that you need to build the Spike Dog. 
 ![material](material_SpikeDog.jpg)
 
+The building process is captured in the video below. Moreover, below the video two explosion pictures depicting the placement of the parts (excluding the pins) from two different angles can be found. These images were made using the CAD application [“LeoCAD”](https://www.leocad.org/ ). If you decide to download this application, a complete robot replication (excluding the pins) and the explosion view of the robot for LeoCAD are provided in the file you can find on top.  
+
+![video building](material-sd_2.mp4)
+
+In case you do not want to download this application, you can find stark reductionistic representations of the two files below. These can be opened via the standard 3dViewer but do not display colors.
+
 ![3d1](Spikeface.png)
 ![3d2](Spikefront.png)
+![3d3](Spikeback_left_explosion.png)
+![3d4](spike_frontal_right_explosion.png)
 
-
-CAD-Bilder
-Explosionsding
-Satz: Hier noch video
-Video
-   
-CAD Bildern, Video
 ## Programming our Spike Dog
 To program our Spike dog we used the *Lego Spike App* and its programming user interface. After opening the App you will see a variety of tutorials and example projects. We recommend the *"First steps"-Tutorial* because it will introduce you to the most important components and commands in a short time and its fun. 
 
@@ -57,15 +58,15 @@ Here you can see all of our code. In the following we will show our code in deta
 ![code](code_komplett.jpg)
 
 ### The Movement block
-First, we want the Spike dog to start moving. To structure our code, we used the *define brick* from *your own bricks* and gave it a simple name like *"Vorwärts"*. The purple block makes the diplay show a heart. This is not neccessary for the movement of the robot, but it is useful to know which part of the code is running on your robot right now. The following three bricks are responsible for the movement: We start the motors for our wheels and set the speed on 30%.
-Now our Spike Dog will move forward in a straight light, when you start the program. 
+First, you want the Spike dog to start moving. To structure our code, we used the *define brick* from *your own bricks* and gave it a simple name like *"Vorwärts"*. The purple block makes the diplay show a heart. This is not neccessary for the movement of the robot, but it is useful to know which part of the code is running on your robot right now. The following three bricks are responsible for the movement: You start the motors for the wheels and set the speed on 30%.
+Now your Spike Dog will move forward in a straight light, when you start the program. 
 
 **Please be careful**: Depending on the position of the motors you might need to change the direction of the wheels turning. You can do this by clicking on the arrows in the blue bricks.  
 
 ![code2](movement_block.jpg)
 
 ### The Greeting block
-Our Spike Dog should be able to recognize us and greet us by wagging it's tail and head. We will use the *colour sensor* for this. To start we will define a brick again and call it *"Begrüßung"*. First we use the *"stoppe andere Stapel"*-brick to prevent instructions from other blocks from interfering with this process. Then the blue brick stops the movement. After a short pause for one second (yellow brick) we use a *control brick* to repeat the action two times. The action that should be repeated has to placed inside the control brick. Here, we want the Spike dogs eyes to blink and the display to show a smile. The purple brick starts the barking sound. Then we us a *motor brick* to activate the wagging of the tail and head. Try out different degrees and choose what looks best for you! 
+Your Spike Dog should be able to recognize you and greet you by wagging it's tail and head. You will use the *colour sensor* for this. To start define a brick again and call it *"Begrüßung"*. First, use the *"stoppe andere Stapel"*-brick to prevent instructions from other blocks from interfering with this process. Then the blue brick stops the movement. After a short pause for one second (yellow brick) you should use a *control brick* to repeat the action two times. The action that should be repeated has to placed inside the control brick. Here, you want the Spike dogs eyes to blink and the display to show a smile. The purple brick starts the barking sound. Then you use a *motor brick* to activate the wagging of the tail and head. Try out different degrees and choose what looks best for you! 
 
 **Please be careful: Watch out which motor you choose here!**
 
@@ -74,7 +75,7 @@ As we said, this action will be repeated twice. After a short pause, we use a *m
 ![code2](greeting_block.jpg)
 
 ### The Stranger block
-We also want to define what happens when our Spike dog recognizes a stranger. Again we use a *define brick* and stop the other blocks (yellow brick). Just as before, we start by stopping the movement and wait (blue and yellow bricks). Again, we use a *repeat brick*, but now we use a *sound brick* to start the barking sound and a *light brick* to write "STOP!" at the display. 
+You also want to define what happens when your Spike dog recognizes a stranger. Again you should use a *define brick* and stop the other blocks (yellow brick). Just as before, you start by stopping the movement and wait (blue and yellow bricks). Again,you use a *repeat brick*, but now you use a *sound brick* to start the barking sound and a *light brick* to write "STOP!" at the display. 
 
 **Watch out: Click on the sound brick to choose differnt sounds.**
 
@@ -83,38 +84,38 @@ After barking twice and a 1s pause, the Spike Dog will start moving again.
 ![code3](stranger_block.jpg)
 
 ### The Dodge block
-Right now, our Spike Dog is able to move forward. You might already know that it will not stop and run into things. With the nect function we are going to change this. Again we use a *define* block and stop the actions of other blocks (yellow brick). We use the purple brick and write an "A" to indicate that we are in block *"Ausweichen"*. Now you could us a *control brick* and say "If we detect something close to use, then do this..". This works perfectly fine and you are welcome to try it out!
+Right now, your Spike Dog is able to move forward. You might already know that it will not stop and run into things. With the next function you are going to change this. Again, use a *define* block and stop the actions of other blocks (yellow brick). Then use the purple brick and write an "A" to indicate that Spike Dog is in block *"Ausweichen"*. Now you could us a *control brick* and say "If we detect something close to use, then do this..". This works perfectly fine and you are welcome to try it out!
 
-But we want more functionality. That's why we use an *falls-dann control brick*. Under *sensors* you will find the brick that we will us as our condition: "if our colour sensor F will detects a specific colour". Then we define, what should happen if that condition appears: We will go to the function blocks we defined earlier. 
-In our case, we use yellow to indicate something familiar and start the *Greeting block*. When the sensor detects something magenta it will start the *Stranger block* instead. In both cases we will jump to the *Movement block* afterwards. 
+But we wanted more functionality. That's why we advise to use an *falls-dann control brick*. Under *sensors* you will find the brick that we will us as our condition: "if our colour sensor F will detects a specific colour". Then define, what should happen if that condition appears: It will go to the function blocks you defined earlier. 
+Then use the colour yellow to indicate something familiar and start the *Greeting block*. When the sensor detects something magenta it will start the *Stranger block* instead. In both cases it will jump to the *Movement block* afterwards. 
 
-Now we continue with the case that the colour sensor doesn't recognize magenta or yellow. Then it will stop all movement and wait for 1s.
+Now continue with the case that the colour sensor doesn't recognize magenta or yellow. Then it will stop all movement and wait for 1s.
 
 **Be careful: Choose both motors to stop the movement completely!**
 
-Then we use a *movement brick* to make the wheels turn two times. Use the arrow to choose a backwards diretion. To finish the dodge maneuver we use another *movement brick* and starte a rotation in any direction. We choose 100 degrees to the left, but you are welcome to change this to your preferences. 
+Then use a *movement brick* to make the wheels turn two times. Use the arrow to choose a backwards diretion. To finish the dodge maneuver use another *movement brick* and start a rotation in any direction. We choose 100 degrees to the left, but you are welcome to change this to your preferences. 
 
-Then after another short break we will start the *Movement block* again. This makes the Spike Dog stop, move backwards and turn after detecting something. Now the Spike Dog is able to take a walk with you and hold a defined distance to you. 
+Then after another short break it will start the *Movement block* again. This makes the Spike Dog stop, move backwards and turn after detecting something. Now the Spike Dog is able to take a walk with you and hold a defined distance to you. 
 
 ![code4](dodge_block.jpg)
 
 ### The Heel block
-Right now, our Spike Dog is theoretically able to walk forward, dodge things and react to colours. But what if you want to take it for a walk? 
-Again we start with a *define brick* and stop other blocks. The F ("bei Fuß") will indicate that we are in this block. We use two *movement bricks* to start the forward movement and set the speed to 40%. We will later learn how the *Heel function* is activated. For now, just know that it will work, until you press the button (See yellow block *repeat until*). 
-Now we use three *if..then* bricks for three conditions. 
+Right now, Spike Dog is theoretically able to walk forward, dodge things and react to colours. But what if you want to take it for a walk? 
+Again start with a *define brick* and stop other blocks. The F ("bei Fuß") will indicate that is in this block. Use two *movement bricks* to start the forward movement and set the speed to 40%. We will explain how the *Heel function* is activated later. For now, just know that it will work, until you press the button (See yellow block *repeat until*). 
+Now use three *if..then* bricks for three conditions. 
 1. If the Spike dog is farther away than 15cm it starts moving.
 2. If the distance is exactly 15cm it will stop moving.
 3. And if the distance is shorter than 15cm it will move backwards.
 
-This will be repeated until, you push the button. Then the *Movement block* will start again. 
+This will be repeated until you push the button. Then the *Movement block* will start again. 
 
 ![code5](heel_block.jpg)
 
 ### The Main block
-Before, we defined some functions but we weren't able to start them. We will bring everthing together now and code our Main block. We use a "*Wenn Programm startet*" brick first. Then we use a *movement brick* to define which motors are responsible for movement in this block. We use a *control brick* to repeat the next bricks continously. 
-If everything is normal, the Spike Dog will follow the instructions of the *Movement block*. Now we add conditions: If the *distance sensor* detects something closer than 30cm, we will go to the *Dodge block*. In case the button is pushed, we will go to the *Heel block*. We already introduced those blocks and their funtionalities earlier, so you should be familiar with them already. 
+Before, you defined some functions but you weren't able to start them. You will bring everthing together now and code the Main block. Use a "*Wenn Programm startet*" brick first. Then use a *movement brick* to define which motors are responsible for movement in this block. Use a *control brick* to repeat the next bricks continously. 
+If everything is normal, the Spike Dog will follow the instructions of the *Movement block*. Now you add conditions: If the *distance sensor* detects something closer than 30cm, it will go to the *Dodge block*. In case the button is pushed, it will go to the *Heel block*. We already introduced those blocks and their funtionalities earlier, so you should be familiar with them already. 
 
-With this our code is finished and your Spike Dog is ready to explore the world. 
+With this your code is finished and your Spike Dog is ready to explore the world. 
 
 ![code6](main_block.jpg)
 

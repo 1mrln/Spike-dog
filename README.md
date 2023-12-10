@@ -4,7 +4,7 @@ Robotic dog with social functions made with Lego Spike.
 ## What is this? 
 We build a robotic dog with a focus on social interaction. It can move freely around the room and avoids obstacles. It also shows different reactions to different colors. When it sees yellow, it "greets" you by wagging its head and tail and barking happily. On magenta, it stops, barks and sounds the alarm. At the touch of a button, it starts the "heel" function, in which it moves at a defined distance from a person/object. 
 In the following you can see a video with the functions and the code will be explained later. 
-![Klick here to atch the video where all the features of the Spike Dog are explained!]([https://youtu.be/c9I_wSgQMaw](https://youtu.be/c9I_wSgQMaw)
+[Click here to atch the video where all the features of the Spike Dog are explained!]([https://youtu.be/c9I_wSgQMaw](https://youtu.be/c9I_wSgQMaw)
 
 ## Our idea and its development
 At the beginning we wanted to develop a robotic dog that improves your security at home by patrolling your house and alarming you. To scare off strangers, he should also be able to stand up and bark. 
@@ -33,7 +33,7 @@ In the following picture you can see all the material that you need to build the
 
 The building process is captured in the video below. Moreover, below the video two explosion pictures depicting the placement of the parts (excluding the pins) from two different angles can be found. These images were made using the CAD application [“LeoCAD”](https://www.leocad.org/ ). If you decide to download this application, a complete robot replication (excluding the pins) and the explosion view of the robot for LeoCAD are provided in the file you can find on top.  
 
-[Klick here to watch a video about how to build the Spike Dog!](https://youtu.be/X9NaPeHyShA)
+[Click here to watch a video about how to build the Spike Dog!](https://youtu.be/X9NaPeHyShA)
 
 In case you do not want to download this application, you can find stark reductionistic representations of the two files below. These can be opened via the standard 3dViewer but do not display colors.
 
@@ -122,7 +122,7 @@ With this your code is finished and your Spike Dog is ready to explore the world
 ## Lessons learned and future works
 We learned a lot about the sensors (distance, color and force sensors). We encountered problems that we learned to deal with. For example, the short distance for the color perception of the color sensor and that the obstacles for the distance sensor cannot be made of any material, as it uses ultrasonic technology (therefore don't use sound-absorbing materials). 
 
-For optimized social human-machine interaction, it's advisable to use an AI camera for better recognition of the environment (especially people) and a microphone for voice commands. However, these aren't included in the [LEGO® Education SPIKE™ Prime-Set](https://education.lego.com/de-de/products/lego-education-spike-prime-set/45678/). With an AI camera, the heel function could possibly not only work in a straight line, as in our case.
+For future projects and optimized social human-machine interaction, we would love to use an AI camera for better recognition of the environment (especially people) and a microphone for voice commands. However, these aren't included in the [LEGO® Education SPIKE™ Prime-Set](https://education.lego.com/de-de/products/lego-education-spike-prime-set/45678/). With an AI camera, you could also improve the heel function. In our case it is only able to follow in a straight line right now.
 
 Furthermore, the movement could be made more dog-like by replacing the wheels and using joints to represent the legs. 
 

@@ -33,7 +33,7 @@ In the following picture you can see all the material that you need to build the
 
 The building process is captured in the video below. Moreover, two explosion pictures depicting the placement of the parts (excluding the pins) from two different angles can be found in the file repository. These images were made using the CAD application [“LeoCAD”](https://www.leocad.org/ ). If you decide to download this application, a complete robot replication (excluding the pins) and the explosion view of the robot for LeoCAD are provided in the file repository -- these files end with .ldr.  
 
-[Click here to watch a video about how we build our Spike Dog!](https://youtu.be/X9NaPeHyShA)
+[Click here to watch a video about how we built our Spike Dog!](https://youtu.be/X9NaPeHyShA)
 
 In case you do not want to download this application, you can find stark reductionistic representations of the two LeoCAD files in the file repository -- these files end with .obj. These can be opened via the standard 3dViewer but do not display colors.
 

@@ -31,7 +31,7 @@ In the following we will guide you through the building process:
 In the following picture you can see all the material that you need to build the Spike Dog. 
 ![material](material_SpikeDog.jpg)
 
-The building process is captured in the video below. Moreover, below the video two explosion pictures depicting the placement of the parts (excluding the pins) from two different angles can be found. These images were made using the CAD application [“LeoCAD”](https://www.leocad.org/ ). If you decide to download this application, a complete robot replication (excluding the pins) and the explosion view of the robot for LeoCAD are provided in the file you can find on top.  
+The building process is captured in the video below. Moreover, two explosion pictures depicting the placement of the parts (excluding the pins) from two different angles can be found in the file repository. These images were made using the CAD application [“LeoCAD”](https://www.leocad.org/ ). If you decide to download this application, a complete robot replication (excluding the pins) and the explosion view of the robot for LeoCAD are provided in the file you can find in the file repository -- these files end with .ldr.  
 
 [Click here to watch a video about how we build our Spike Dog!](https://youtu.be/X9NaPeHyShA)
 
